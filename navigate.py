@@ -17,8 +17,7 @@ def open_browser(url):
     g.options.binary_location = ""  # chrome binary path needed here.
     g.options.add_experimental_option("excludeSwitches", ["enable-automation"])
     g.options.add_experimental_option('useAutomationExtension', False)
-    g.driver = webdriver.Chrome(options=g.options,
-                                executable_path=r'') # chromedrive.exe path needed here.
+    g.driver = webdriver.Chrome(options=g.options) #no need to specific path, if chromedriver already in path.
     g.driver.get(url)
 
 
