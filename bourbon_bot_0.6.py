@@ -1,8 +1,8 @@
+import global_vars as g
+import schedule
+import navigate
 import time
 import send
-import global_vars as g
-import navigate
-import schedule
 
 
 ##### Bourbon to search for...
