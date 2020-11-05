@@ -7,7 +7,7 @@ import schedule
 
 ##### Bourbon to search for...
 
-g.bourbon = 'Blant'     # Search string. Patrial text >> complete search term.
+g.bourbon = 'Blant'     # Search string. Partial text >> complete search term.
 print(f'Started searching for {g.bourbon} at {send.timestamp()}...')
 print('____________\n')
 
@@ -15,14 +15,15 @@ print('____________\n')
 ###### Search Functions
 
 def search_liquor_stores():
-    navigate.liquor_store_webpage()
-    not_in_stock_message = g.driver.find_elements_by_id('dnn_ctr543_View_NoResults')    # Message when 0 results return.
+    stock_info = navigate.liquor_store_webpage()
 
-    if not_in_stock_message:
-        print(f'{g.bourbon} is not in stock Locally. {send.timestamp()}.')
-    else:
-        navigate.sorted_store_list()
+    if g.bourbon_isAvailable:
+        g.stock_locations = navigate.sort_store_list(stock_info)
         send.text_of_local_stock()
+
+    else:
+        print(f'{g.bourbon} is not in stock Locally. {send.timestamp()}.')
+
     g.driver.close()
 
 
@@ -38,10 +39,10 @@ def search_warehouse():
     g.driver.close()
 
 
-##### Testing and debug functions
+##### Testing and debug
 
 #search_warehouse()
-#search_liquor_stores()
+search_liquor_stores()
 
 
 ###### Scheduled Searches
