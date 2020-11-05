@@ -1,11 +1,11 @@
-from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-import global_vars as g
+from selenium import webdriver
 from dotenv import load_dotenv
-import os
+import global_vars as g
 import time
+import os
 
 load_dotenv()
 log = open("stock_log.txt", "a")
