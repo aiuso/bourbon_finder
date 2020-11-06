@@ -34,16 +34,18 @@ def liquor_store_webpage():
     time.sleep(3)
     product_name = g.driver.find_elements_by_class_name('product-location-link')
 
-    if g.bourbon in product_name[0].text:
-        g.driver.find_element(By.PARTIAL_LINK_TEXT, "Blade").click()
-        time.sleep(3)
-        table_rows = g.driver.find_elements(By.TAG_NAME, 'td')
-        g.bourbon_isAvailable = True
-        return table_rows
+    try:
+        if g.bourbon in product_name[0].text:
+            g.driver.find_element(By.PARTIAL_LINK_TEXT, "Blade").click()
+            time.sleep(3)
+            table_rows = g.driver.find_elements(By.TAG_NAME, 'td')
+            g.bourbon_isAvailable = True
+            return table_rows
+        else:
+            g.bourbon_isAvailable = False
 
-    else:
+    except IndexError:
         g.bourbon_isAvailable = False
-        pass
 
     print('test')
 
