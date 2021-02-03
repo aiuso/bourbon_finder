@@ -1,7 +1,7 @@
 # Bourbon Bot
 
 
-As any Bourbon fan already knows: one of the best tasting – and hardest to come by – bourbon is a nice bottle of Blanton’s. The goal of bourbon bot is to put a bottle of bourbon ~~in the hands of anyone who~~ my hands! The 'bot' is a Python script that scrapes NC state liquor inventories and send notifications when that sweet bottle of Blanton’s is in stock and where you can get it.
+As any Bourbon fan already knows: one of the best tasting – and hardest to come by – bourbon is a nice bottle of Blanton’s. The goal of bourbon bot is to put a bottle of bourbon in ~~the hands of anyone who~~ my hands! The 'bot' is a Python script that scrapes NC state liquor inventories and send notifications when that sweet bottle of Blanton’s is in stock and where you can get it.
 
 
 # Requirements
