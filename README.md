@@ -13,8 +13,8 @@ chromedriver (https://chromedriver.chromium.org/downloads)
 
 
 # What it does
-* Navigates webpages using Selenium webdriver.
-* Scrapes webpage data into data objects.
+* Navigates and interacts with webpages using Selenium webdriver.
+* Scrapes webpage data into Python data objects.
 * Uses Twilio SMS API to send text about inventory stock and location.
 * Uses Discord webhook to send Discord notifications about inventory stock and location.
 
