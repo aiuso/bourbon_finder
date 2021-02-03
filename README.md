@@ -6,10 +6,10 @@ As any Bourbon fan already knows: one of the best tasting – and hardest to com
 
 # Requirements
 
-Selenium (https://www.selenium.dev/documentation/en/webdriver/)
-Twilio  (https://www.twilio.com/docs/api)
-chromedriver (https://chromedriver.chromium.org/downloads)
-~~BeautifulSoup4~~ Previous versions of burbon_bot attempted to implement bs4, but webpage changes have made it easier to scrape data solely using Selenium.
+* Selenium (https://www.selenium.dev/documentation/en/webdriver/)
+* Twilio  (https://www.twilio.com/docs/api)
+* chromedriver (https://chromedriver.chromium.org/downloads)
+* ~~BeautifulSoup4~~ Previous versions of burbon_bot attempted to implement bs4, but webpage changes have made it easier to scrape data solely using Selenium.
 
 
 # What it does
