@@ -41,7 +41,7 @@ def search_warehouse():
 
 ##### Testing and debug
 
-#search_warehouse()
+search_warehouse()
 search_liquor_stores()
 
 

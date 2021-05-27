@@ -47,7 +47,6 @@ def liquor_store_webpage():
     except IndexError:
         g.bourbon_isAvailable = False
 
-    print('test')
 
 
 
