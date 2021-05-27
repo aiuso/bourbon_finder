@@ -1,5 +1,5 @@
 from twilio.rest import Client
-import global_vars as g
+import global_vars as bf
 import datetime
 from dotenv import load_dotenv
 import os
@@ -24,35 +24,35 @@ def timestamp():
 
 
 def format_message():
-    g.message_string = ''
+    bf.message_string = ''
     i = 0
-    while i < len(g.stock_locations):
-        g.message_string += f'\nThere are {g.stock_locations[i][0]} of {g.bourbon} at {g.stock_locations[i][1]}'
+    while i < len(bf.stock_locations):
+        bf.message_string += f'\nThere are {bf.stock_locations[i][0]} of {bf.bourbon} at {bf.stock_locations[i][1]}'
         i += 1
 
 
 def text_of_local_stock():
     format_message()
-    print(f'Local Stock Available! {g.bourbon} is in stock at ABC Stores! {timestamp()}{g.message_string}')
+    print(f'Local Stock Available! {bf.bourbon} is in stock at ABC Stores! {timestamp()}{bf.message_string}')
     with open('stock_log.txt', 'a') as file_object:
-        file_object.write(f'Local Stock Available! {g.bourbon} is in stock at ABC Stores! {timestamp()}{g.message_string}\n\n')
+        file_object.write(f'Local Stock Available! {bf.bourbon} is in stock at ABC Stores! {timestamp()}{bf.message_string}\n\n')
 
     message = sms_client.messages.create(
         to=os.getenv('phone_to'),
         from_=os.getenv('phone_from'),
-        body=f"{g.bourbon} is in stock Locally! {g.message_string}")
+        body=f"{bf.bourbon} is in stock Locally! {bf.message_string}")
 
 
 def text_of_warehouse_stock():
-    print(f'{g.warehouse_stock_number} cases of {g.bourbon} in Raleigh warehouses. Monitor local stock!'
+    print(f'{bf.warehouse_stock_number} cases of {bf.bourbon} in Raleigh warehouses. Monitor local stock!'
           f' {timestamp()}.')
 
     with open('stock_log.txt', 'a') as file_object:
-        file_object.write(f'{g.warehouse_stock_number} cases of {g.bourbon} in Raleigh warehouses. Monitor local stock!'
+        file_object.write(f'{bf.warehouse_stock_number} cases of {bf.bourbon} in Raleigh warehouses. Monitor local stock!'
           f' {timestamp()}.\n\n')
 
     message = sms_client.messages.create(
         to=os.getenv('phone_to'),
         from_=os.getenv('phone_from'),
-        body=f'{g.warehouse_stock_number} cases of {g.bourbon} in Raleigh warehouses. Monitor local stock!')
+        body=f'{bf.warehouse_stock_number} cases of {bf.bourbon} in Raleigh warehouses. Monitor local stock!')
 
