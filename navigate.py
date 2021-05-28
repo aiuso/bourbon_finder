@@ -33,7 +33,6 @@ def liquor_store_webpage():
     bf.driver.find_element(By.ID, 'search-input').send_keys(bf.bourbon + Keys.ENTER)
     time.sleep(3)
     product_name = bf.driver.find_elements_by_class_name('product-location-link')
-
     try:
         if bf.bourbon in product_name[0].text:
             bf.driver.find_element(By.PARTIAL_LINK_TEXT, "Blade").click()
@@ -49,22 +48,15 @@ def liquor_store_webpage():
 
 
 
-
 def warehouse_webpage():
     open_browser(url.get('warehouse'))
     bf.product_search_box = bf.driver.find_element_by_id("BrandName")
     bf.product_search_box.send_keys(bf.bourbon + Keys.ENTER)
 
 
-def warehouse_again():
-    bf.product_search_box = bf.driver.find_element_by_id("BrandName")
-    bf.product_search_box.send_keys(Keys.ENTER)
-
-
 def sort_store_list(list):
     instock_locations = []
     info = []
-
     for each in list:
         if len(info) < 2:
             if each.text == '' or 'map' in each.text.lower():
@@ -74,5 +66,4 @@ def sort_store_list(list):
         else:
             instock_locations.append(info)
             info = []
-
     return instock_locations

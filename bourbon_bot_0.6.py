@@ -8,7 +8,7 @@ import send
 
 ##### Bourbon to search for...
 
-g.bourbon = 'Blade'     # Search string. Partial text >> complete search term.
+g.bourbon = 'Blant'     # Search string. Partial text >> complete search term.
 print(f'Started searching for {g.bourbon} at {send.timestamp()}...')
 print('____________\n')
 
