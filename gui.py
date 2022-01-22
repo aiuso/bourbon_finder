@@ -1,4 +1,7 @@
 from tkinter import *
+from tkinter import ttk
+import global_vars as bf
+import bot
 
 
 
@@ -6,7 +9,9 @@ from tkinter import *
 search_type = None
 bourbon = None
 
-# Initialize
+############# Initialize GUI
+
+
 window = Tk()
 window.title("Bourbon Finder")
 window.geometry('400x150')
@@ -44,20 +49,27 @@ radio_two.pack(anchor=W)
 reminder.configure(bg='#2b2b2b', fg='#a9b7c6')"""
 
 
-#Button configuration
+###### Button configuration
 
 def on_click():
 
     search = search_value.get()
-    bourbon = user_input.get()
-    print('test')
+    bf.bourbon = user_input.get()
+    bot.run()
+    #print('test')
 
+"""
+def on_stop():
+   global running
+   running = False"""
 
 bottom_frame = Frame(frame)
 bottom_frame.pack(side=BOTTOM)
 button = Button(window, text="Search", command=on_click)
 button.configure(bg='#3a3f3f', fg='#a9b7c6', activebackground='#cc7832')
 button.pack(side=BOTTOM)
+
+#stop = ttk.Button(window, text="Stop", command=on_stop)
 
 
 

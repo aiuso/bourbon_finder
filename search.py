@@ -11,7 +11,7 @@ def liquor_stores():
         bf.stock_locations = navigate.sort_store_list(stock_info)
         send.text_of_local_stock()
     else:
-        print(f'{bf.bourbon} is not in stock Locally. {send.timestamp()}.')
+        send.discord_msg(f'{bf.bourbon} is not in stock Locally. | {send.timestamp()}.')
 
     bf.driver.close()
 
@@ -24,6 +24,6 @@ def warehouse():
     if bf.warehouse_stock_number > 0:
         send.text_of_warehouse_stock()
     else:
-        print(f'{bf.bourbon} is not in stock at Warehouses. {send.timestamp()}.')
+        send.discord_msg(f'{bf.bourbon} is not in stock at Warehouses. | {send.timestamp()}.')
 
     bf.driver.close()

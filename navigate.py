@@ -28,30 +28,24 @@ def open_browser(url):
     bf.driver.get(url)
 
 
+##### Navigation of Local Liquor Store Webpage - Determine if Bourbon in stock & Identify Locations
+
 def liquor_store_webpage():
     open_browser(url.get('meckabc'))
     bf.driver.find_element(By.ID, 'search-input').send_keys(bf.bourbon + Keys.ENTER)
     time.sleep(3)
     product_name = bf.driver.find_elements_by_class_name('product-location-link')
     try:
-        if bf.bourbon in product_name[0].text:
+        if bf.bourbon.lower() in product_name[0].text.lower():
             bf.driver.find_element(By.PARTIAL_LINK_TEXT, "Blade").click()
             time.sleep(3)
             table_rows = bf.driver.find_elements(By.TAG_NAME, 'td')
             bf.bourbon_isAvailable = True
             return table_rows
         else:
-            bf.bourbon_isAvailable = False
-
+            pass
     except IndexError:
-        bf.bourbon_isAvailable = False
-
-
-
-def warehouse_webpage():
-    open_browser(url.get('warehouse'))
-    bf.product_search_box = bf.driver.find_element_by_id("BrandName")
-    bf.product_search_box.send_keys(bf.bourbon + Keys.ENTER)
+        pass
 
 
 def sort_store_list(list):
@@ -67,3 +61,16 @@ def sort_store_list(list):
             instock_locations.append(info)
             info = []
     return instock_locations
+
+
+
+##### Navigation of State Liquor Inventory Webpage - Determine if Bourbon in stock
+
+def warehouse_webpage():
+    open_browser(url.get('warehouse'))
+    bf.product_search_box = bf.driver.find_element_by_id("BrandName")
+    bf.product_search_box.send_keys(bf.bourbon + Keys.ENTER)
+
+
+
+

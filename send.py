@@ -1,8 +1,11 @@
+from discord_webhook import DiscordWebhook, DiscordEmbed
 from twilio.rest import Client
-import global_vars as bf
-import datetime
 from dotenv import load_dotenv
+import global_vars as bf
+import requests
+import datetime
 import os
+
 
 
 ##### File for Logging Stock Trends
@@ -33,26 +36,50 @@ def format_message():
 
 def text_of_local_stock():
     format_message()
-    print(f'Local Stock Available! {bf.bourbon} is in stock at ABC Stores! {timestamp()}{bf.message_string}')
-    with open('stock_log.txt', 'a') as file_object:
-        file_object.write(f'Local Stock Available! {bf.bourbon} is in stock at ABC Stores! {timestamp()}{bf.message_string}\n\n')
+    message = f'Local Stock Available! {bf.bourbon} is in stock at ABC Stores! {timestamp()}{bf.message_string}'
 
-    message = sms_client.messages.create(
-        to=os.getenv('phone_to'),
-        from_=os.getenv('phone_from'),
-        body=f"{bf.bourbon} is in stock Locally! {bf.message_string}")
+    discord_msg(message)
+    write_toFile(message)
+    text_message(message)
 
 
 def text_of_warehouse_stock():
-    print(f'{bf.warehouse_stock_number} cases of {bf.bourbon} in Raleigh warehouses. Monitor local stock!'
-          f' {timestamp()}.')
+    message = f'{bf.warehouse_stock_number} cases of {bf.bourbon} in Raleigh warehouses. ' \
+              f'Monitor local stock!'
 
+    discord_msg(message)
+    write_toFile(message)
+    text_message(message)
+
+########################  Sending Messages  ################################
+
+
+##### Twilio Text Message
+
+def write_toFile(msg):
     with open('stock_log.txt', 'a') as file_object:
-        file_object.write(f'{bf.warehouse_stock_number} cases of {bf.bourbon} in Raleigh warehouses. Monitor local stock!'
-          f' {timestamp()}.\n\n')
+        file_object.write(msg)
 
-    message = sms_client.messages.create(
-        to=os.getenv('phone_to'),
-        from_=os.getenv('phone_from'),
-        body=f'{bf.warehouse_stock_number} cases of {bf.bourbon} in Raleigh warehouses. Monitor local stock!')
 
+##### Twilio Text Message
+
+def text_message(msg):
+        message = sms_client.messages.create(
+            to=os.getenv('phone_to'),
+            from_=os.getenv('phone_from'),
+            body=msg)
+
+
+##### Discord Notifications
+
+def discord_msg(msg):
+    webhook = DiscordWebhook(url=os.getenv('discord_webhook_url'), content=msg)
+
+    if bf.bourbon_isAvailable:
+        webhook.content = '@here'
+        embed = DiscordEmbed(title=f'Bourbon Updates - {timestamp()}', description=str(msg))
+        webhook.add_embed(embed)
+    else:
+        pass
+
+    response = webhook.execute()

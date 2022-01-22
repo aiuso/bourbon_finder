@@ -9,6 +9,7 @@ import send
 ##### Bourbon to search for...
 
 g.bourbon = 'Blant'     # Search string. Partial text >> complete search term.
+g.bourbon_isAvailable = False   #Default should be false
 print(f'Started searching for {g.bourbon} at {send.timestamp()}...')
 print('____________\n')
 
@@ -28,3 +29,4 @@ schedule.every(15).minutes.do(search.warehouse)             # Warehouse inventor
 while True:
     schedule.run_pending()
     time.sleep(1)
+

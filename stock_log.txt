@@ -1,31 +1,56 @@
 Stock log...
-Local Stock Available! Blade is in stock at ABC Stores! Thu May 27 19:49:33 2021
-There are 5 of Blade at 3124 Weddington Rd.
-There are 17 of Blade at 125 Cherry St.
-There are 28 of Blade at 4329 Park Rd.
-There are 8 of Blade at 7044 Brighton Park Dr.
-There are 1 of Blade at 3401 David Cox Rd.
-There are 38 of Blade at 3904 E. Colony Rd.
-There are 5 of Blade at 4020 Brookshire Blvd.
-There are 10 of Blade at 3425 Pineville-Matthews Rd.
-There are 4 of Blade at 9740 University City Blvd.
-There are 13 of Blade at 16019 Lancaster Hwy.
-There are 7 of Blade at 4450 Randolph Rd.
-There are 2 of Blade at 1426-B S. Tyron St.
-There are 16 of Blade at 9920-A Independence Blvd.
-
-Local Stock Available! Blade is in stock at ABC Stores! Thu May 27 19:56:36 2021
-There are 5 of Blade at 3124 Weddington Rd.
-There are 17 of Blade at 125 Cherry St.
-There are 28 of Blade at 4329 Park Rd.
-There are 8 of Blade at 7044 Brighton Park Dr.
-There are 1 of Blade at 3401 David Cox Rd.
-There are 38 of Blade at 3904 E. Colony Rd.
-There are 5 of Blade at 4020 Brookshire Blvd.
-There are 10 of Blade at 3425 Pineville-Matthews Rd.
-There are 4 of Blade at 9740 University City Blvd.
-There are 13 of Blade at 16019 Lancaster Hwy.
-There are 7 of Blade at 4450 Randolph Rd.
-There are 2 of Blade at 1426-B S. Tyron St.
-There are 16 of Blade at 9920-A Independence Blvd.
-
+133 cases of Blade in Raleigh warehouses. Monitor local stock!Local Stock Available! Blade is in stock at ABC Stores! Fri Jan 21 19:35:00 2022
+There are 6 of Blade at 4706 N. Tryon St.
+There are 12 of Blade at 3124 Weddington Rd.
+There are 8 of Blade at 125 Cherry St.
+There are 6 of Blade at 2915 Wilkinson Blvd
+There are 3 of Blade at 7044 Brighton Park Dr.
+There are 8 of Blade at 1609 North Graham St.
+There are 6 of Blade at 3401 David Cox Rd.
+There are 4 of Blade at 3904 E. Colony Rd.
+There are 1 of Blade at 9500 South Blvd.
+There are 54 of Blade at 3425 Pineville-Matthews Rd.
+There are 8 of Blade at 9841 Rocky River Rd.
+There are 7 of Blade at 9740 University City Blvd.
+There are 3 of Blade at 16019 Lancaster Hwy.
+There are 34 of Blade at 323 Huntersville Gateway Blvd.
+There are 26 of Blade at 8130 South Tryon St.
+There are 2 of Blade at 5715 Prosperity Church Rd
+There are 33 of Blade at 6318 Providence Farm Ln
+There are 9 of Blade at 9920-A Independence Blvd.133 cases of Blade in Raleigh warehouses. Monitor local stock!Local Stock Available! Blade is in stock at ABC Stores! Fri Jan 21 20:14:35 2022
+There are 6 of Blade at 4706 N. Tryon St.
+There are 12 of Blade at 3124 Weddington Rd.
+There are 8 of Blade at 125 Cherry St.
+There are 6 of Blade at 2915 Wilkinson Blvd
+There are 3 of Blade at 7044 Brighton Park Dr.
+There are 8 of Blade at 1609 North Graham St.
+There are 6 of Blade at 3401 David Cox Rd.
+There are 4 of Blade at 3904 E. Colony Rd.
+There are 1 of Blade at 9500 South Blvd.
+There are 54 of Blade at 3425 Pineville-Matthews Rd.
+There are 8 of Blade at 9841 Rocky River Rd.
+There are 7 of Blade at 9740 University City Blvd.
+There are 3 of Blade at 16019 Lancaster Hwy.
+There are 34 of Blade at 323 Huntersville Gateway Blvd.
+There are 26 of Blade at 8130 South Tryon St.
+There are 2 of Blade at 5715 Prosperity Church Rd
+There are 33 of Blade at 6318 Providence Farm Ln
+There are 9 of Blade at 9920-A Independence Blvd.133 cases of Blade in Raleigh warehouses. Monitor local stock!Local Stock Available! Blade is in stock at ABC Stores! Fri Jan 21 21:57:26 2022
+There are 6 of Blade at 4706 N. Tryon St.
+There are 12 of Blade at 3124 Weddington Rd.
+There are 8 of Blade at 125 Cherry St.
+There are 6 of Blade at 2915 Wilkinson Blvd
+There are 3 of Blade at 7044 Brighton Park Dr.
+There are 8 of Blade at 1609 North Graham St.
+There are 6 of Blade at 3401 David Cox Rd.
+There are 4 of Blade at 3904 E. Colony Rd.
+There are 1 of Blade at 9500 South Blvd.
+There are 54 of Blade at 3425 Pineville-Matthews Rd.
+There are 8 of Blade at 9841 Rocky River Rd.
+There are 7 of Blade at 9740 University City Blvd.
+There are 3 of Blade at 16019 Lancaster Hwy.
+There are 34 of Blade at 323 Huntersville Gateway Blvd.
+There are 26 of Blade at 8130 South Tryon St.
+There are 2 of Blade at 5715 Prosperity Church Rd
+There are 33 of Blade at 6318 Providence Farm Ln
+There are 9 of Blade at 9920-A Independence Blvd.
