@@ -1,19 +1,46 @@
+from dotenv import load_dotenv
 import global_vars as bf
-import search
-import schedule
-import time
+import discord
+import requests
+import asyncio
+import main
+import os
 
-def run():
-    bf.bourbon_isAvailable = False  # Default should be false
-    search.warehouse()
-    search.liquor_stores()
+load_dotenv()
+client = discord.Client()
+bot = os.getenv('bot_token')
 
-    ###### Scheduled Searches
+############ Bot Keywords
+search = '$run'
+help = '$help'
+bourbon = '$bourbon'
 
-    schedule.every().day.at("10:01").do(search.liquor_stores)  # Inventory updated at 10:00 AM
-    schedule.every().day.at("10:15").do(search.liquor_stores)  # Second check...
-    schedule.every(15).minutes.do(search.warehouse)  # Warehouse inventory updated every 15 minutes.
 
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+@client.event
+async def on_ready():
+    print('We have logged in as {0.user}'.format(client))
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('$hello'):
+        await message.channel.send('Hello!')
+
+    if message.content.startswith('$run'):
+        await message.channel.send('Search has started...')
+        await main.run()
+
+    if message.content.startswith('$stop'):
+        bf.isSearching = False
+        await message.channel.send('Shutting down search...')
+
+
+    if message.content.startswith('$help'):
+        await message.channel.send(
+            'List of commands: '
+            '\n\t$run_search to start searching for bourbon'
+            '\n\t$blanton ...')
+
+client.run(bot)

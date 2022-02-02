@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 import global_vars as bf
-import bot
+import main
 
 
 
@@ -55,7 +55,7 @@ def on_click():
 
     search = search_value.get()
     bf.bourbon = user_input.get()
-    bot.run()
+    main.run()
     #print('test')
 
 """

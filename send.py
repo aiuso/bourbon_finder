@@ -37,7 +37,6 @@ def format_message():
 def text_of_local_stock():
     format_message()
     message = f'Local Stock Available! {bf.bourbon} is in stock at ABC Stores! {timestamp()}{bf.message_string}'
-
     discord_msg(message)
     write_toFile(message)
     text_message(message)
@@ -46,7 +45,6 @@ def text_of_local_stock():
 def text_of_warehouse_stock():
     message = f'{bf.warehouse_stock_number} cases of {bf.bourbon} in Raleigh warehouses. ' \
               f'Monitor local stock!'
-
     discord_msg(message)
     write_toFile(message)
     text_message(message)
