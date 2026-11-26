@@ -130,3 +130,7 @@ dmypy.json
 
 # Chromedriver
 chromedriver.exe
+venv/
+\.idea/
+__pycache__/
+.env
