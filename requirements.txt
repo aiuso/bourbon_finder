@@ -4,3 +4,4 @@ discord.py>=2.0
 discord-webhook>=1.0
 schedule>=1.2
 python-dotenv>=1.0
+ttkbootstrap>=1.10,<2

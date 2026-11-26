@@ -1,6 +1,6 @@
 # Bourbon Bot
 
-As any Bourbon fan already knows: one of the best tasting – and hardest to come by – bourbon is a nice bottle of Blanton’s. The goal of bourbon bot is to locate hard to get bourbons in NC state liquor stores when and where available! The 'bot' is a Python script that scrapes NC state liquor inventories and sends notifications when that bottle of Blanton’s is in stock and where you can get it.
+As any Bourbon fan already knows: one of the best tasting – and hardest to come by – bourbon is a nice bottle of Blanton’s. The goal of bourbon bot is to put a bottle of bourbon in ~~the hands of anyone who~~ my hands! The 'bot' is a Python script that scrapes NC state liquor inventories and sends notifications when that sweet bottle of Blanton’s is in stock and where you can get it.
 
 ## What it does
 
@@ -61,7 +61,7 @@ python main.py "Blant" --once   # search once and exit
 python gui.py
 ```
 
-Type the bourbon, choose *Single Search* or *Continuous*, then press **Search**. **Stop** ends a continuous search.
+Type the bourbon, choose *Single search* or *Continuous*, then press **Search** (or hit Enter). **Stop** ends a continuous search. A progress bar runs while a search is going, and the **Dark mode** switch flips between the dark and light bourbon themes. The look comes from [ttkbootstrap](https://ttkbootstrap.readthedocs.io/), which `pip install -r requirements.txt` installs.
 
 **Discord bot**
 
@@ -90,7 +90,7 @@ In the Discord Developer Portal, turn on **Message Content Intent** for the bot.
 | `navigate.py` | Selenium page navigation and scraping |
 | `send.py` | Discord, Twilio SMS and log file notifications |
 | `config.py` | Site URLs and settings from `.env` |
-| `gui.py` | Tkinter window |
+| `gui.py` | Desktop window (Tkinter, styled with ttkbootstrap) |
 | `bot.py` | Discord bot |
 | `bourbon.py` | Reference list of NC ABC product codes (not used by the search yet) |
 | `tests/` | Unit tests |
